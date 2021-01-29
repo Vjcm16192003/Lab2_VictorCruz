@@ -7,11 +7,11 @@ import javax.swing.JOptionPane;
 public class Lab2_VictorCruz {
 
     static Scanner sc = new Scanner(System.in);
+    static String username = "David";
+    static String password = "99";
 
     public static void main(String[] args) {
         ArrayList Rest = new ArrayList();
-        String username = "David";
-        String password = "99";
         System.out.println("Ingrese su nombre de usuario!!!: ");
         String user1 = sc.next();
         System.out.println("Ingrese su contraseña!!!: ");
@@ -23,6 +23,7 @@ public class Lab2_VictorCruz {
                     + "1-Reporte de los restaurantes\n"
                     + "2-Manejo de los restaurantes\n"
                     + "3-Salir");
+            System.out.print("-> ");
             menuPrincipal = sc.nextInt();
             switch (menuPrincipal) {
                 case 1:
@@ -95,6 +96,7 @@ public class Lab2_VictorCruz {
                                     + "3-Modificar restaurante\n"
                                     + "4-Eliminar restaurante\n"
                                     + "5-Regresar");
+                            System.out.print("-> ");
                             opc1 = sc.nextInt();
                             
                             switch(opc1){
@@ -178,6 +180,7 @@ public class Lab2_VictorCruz {
                                                 + "8-cambiar nombre del gerente\n"
                                                 + "9-cambiar la especialidad del restaurante\n"
                                                 + "10-Regresar\n");
+                                        System.out.print("-> ");
                                         opc3 = sc.nextInt();
 
                                         switch (opc3) {
@@ -324,6 +327,11 @@ public class Lab2_VictorCruz {
             }//fin del menu principal
         }else{
             System.out.println("Usuario o contreaseña no valida!");
+            System.out.println("");
+            System.out.println("Ingrese su nombre de usuario!!!: ");
+            user1 = sc.next();
+            System.out.println("Ingrese su contraseña!!!: ");
+            psswd1 = sc.next();
         } //fin de validacion
     }//fin del main
 }//fin de la clase 
